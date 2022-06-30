@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -s -masm=intel -Og -fverbose-asm $CFILE > main.s
+gcc -S -masm=intel $CFILE > main.s
