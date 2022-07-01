@@ -4,9 +4,12 @@ int main(void)
 {
 int ch = 'a';
 
-for (ch == 'a'; ch <= 'z' ; ch++)
+while (ch <= 'z')
+{
 	putchar(ch);
-	putchar('\n');
+	ch++;
+}
+	putchar(10);
 
-	return 0;
+return 0;
 }
