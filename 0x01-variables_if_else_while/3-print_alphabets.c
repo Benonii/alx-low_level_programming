@@ -2,21 +2,22 @@
                                                                                                                                                 
 int main(void)                                                                                                                                  
 {                                                                                                                                               
-int ch = 'a';                                                                                                                                   
+char ch = 'a';                                                                                                                                   
                                                                                                                                                 
 while (ch <= 'z')
 {
 	putchar(ch);
 	ch++;
 }
-int capCh = 'A';
+char capCh;
+capCh = 'A';
 
-while (capCh <= 'z')
+while (capCh <= 'Z')
 {
 	putchar(capCh);
 	capCh++;
 }
-	putchar("\n");
+	putchar(10);
                                                                                                                                                 
         return 0;                                                                                                                               
 }                    
