@@ -18,12 +18,10 @@ while (ch <= 'z')
 	}
 	else
 	{
-		putchar(ch);                                                                                                                            
-	        putchar(10);                                                                                                                          
-		        ch++;
+		putchar(ch);                                                                                                                          		ch++;
 	}
 }
-
+	putchar(10);
 	return 0;
 
 }
