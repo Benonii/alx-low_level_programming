@@ -19,7 +19,7 @@ while (ch <= 'z')
 	else
 	{
 		putchar(ch);                                                                                                                            
-	        putchar('\n');                                                                                                                          
+	        putchar(10);                                                                                                                          
 		        ch++;
 	}
 }
