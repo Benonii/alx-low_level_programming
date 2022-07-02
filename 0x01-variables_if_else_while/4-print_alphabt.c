@@ -3,31 +3,22 @@
 /**
  * main - Entry point
  *
- * Return: Always 0 (Success)
+ * Return: ALways 0
  */
 int main(void)
 {
-char ch = 'a';
+	char ch;
 
-while (ch <= 'z')
-{
-	if (ch == 101)
+	for (ch = 'a'; ch <= 'z'; ch++)
 	{
-		ch++;
-		continue;
-	}
-	else if (ch == 113)
-	{
-		ch++;
-		continue;
-	}
-	else
-	{
+		if (ch == 101 || ch == 113)
+		{
+			ch++;
+			putchar(ch);
+			continue;
+		}
 		putchar(ch);
-		ch++;
 	}
-}
 	putchar(10);
 	return (0);
-
 }
