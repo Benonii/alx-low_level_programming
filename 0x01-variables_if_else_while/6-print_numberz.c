@@ -13,5 +13,6 @@ int main(void)
 	{
 		putchar((num % 10) + '0');
 	}
+	putchar(10);
 	return (0);
 }
