@@ -11,12 +11,10 @@ int main(void)
 
 	for (ch = 'a'; ch <= 'z'; ch++)
 	{
-		if (ch == 101 || ch == 113)
+		if (ch != 'e' && ch != 'q')
 		{
-			ch++;
-			continue;
+			putchar(ch);
 		}
-		putchar(ch);
 	}
 	putchar(10);
 	return (0);
