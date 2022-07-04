@@ -30,9 +30,9 @@ int main(void)
 						continue;
 						putchar(',');
 						putchar(' ');
+					}
 					else
 						continue;
-					}
 				}
 			}
 		}
