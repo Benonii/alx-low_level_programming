@@ -19,18 +19,15 @@ int main(void)
 			{
 				for (num4 = 0; num4 < 10; num4++)
 				{
-					if ( num2 != num4)
-					{
-						putchar(num1 + '0');
-						putchar(num2 + '0');
-						putchar(' ');
-						putchar(num3 + '0');
-						putchar(num4 + '0');
-						if (num1 == 9 && num2 == 8 && num3 == 9 && num4 == 9)
+					putchar(num1 + '0');
+					putchar(num2 + '0');
+					putchar(' ');
+					putchar(num3 + '0');
+					putchar(num4 + '0');
+					if (num1 == 9 && num2 == 8 && num3 == 9 && num4 == 9)
 						continue;
-						putchar(',');
-						putchar(' ');
-					}
+					putchar(',');
+					putchar(' ');
 				}
 			}
 		}
