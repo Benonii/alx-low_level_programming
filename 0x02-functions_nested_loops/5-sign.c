@@ -3,6 +3,7 @@
 /**
  * print_sign - Entry point
  *
+ * @n: Any integer in this context
  * Return: 1,0 or -1
  */
 
