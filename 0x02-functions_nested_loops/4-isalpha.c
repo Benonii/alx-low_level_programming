@@ -3,7 +3,7 @@
 /**
  * _isalpha - Entry point
  *
- * @n: ASCII value of a letter
+ * @c: ASCII value of a letter
  * Return: 1 if success and 0 if fail
  */
 int _isalpha(int c)

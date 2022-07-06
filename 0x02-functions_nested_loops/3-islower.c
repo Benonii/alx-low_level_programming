@@ -3,7 +3,7 @@
 /**
  * _islower - Entry point
  *
- * @n: ASCII value of letter
+ * @c: ASCII value of letter
  * Return: 1 if success and 0 if fail
  */
 
