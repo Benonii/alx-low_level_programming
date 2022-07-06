@@ -25,7 +25,7 @@ void print_time_table(int n)
 				if (prod <= 99)
 					_putchar(' ');
 				if (prod <= 9)
-					_puthcar(' ');
+					_putchar(' ');
 
 				if (prod >= 100)
 				{
