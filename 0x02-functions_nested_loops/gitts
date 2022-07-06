@@ -3,5 +3,5 @@
 git add .
 git commit -m "Commits on functions and nested loops"
 
-git pull
+git push
 
