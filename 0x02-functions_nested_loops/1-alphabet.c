@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * main - Entry point
+ * print_alphabet - Entry point
  *
- * Return: Always 0
+ * Return: None(void)
  */
 
 void print_alphabet(void)
@@ -12,7 +12,7 @@ void print_alphabet(void)
 
 	for (letter = 'a'; letter <= 'z'; letter++)
 	{
-		_putchar(letter);		
+		_putchar(letter);
 	}
 	_putchar(10);
 }

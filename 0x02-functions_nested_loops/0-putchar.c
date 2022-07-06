@@ -1,11 +1,4 @@
-#include <stdio.h>
 #include "main.h"
-
-/**
- * main - Entry point
- *
- * Return: Always 0
- */
 
 /**
  * put_char - Entry point
@@ -25,9 +18,4 @@ int put_char(void)
 	putchar('r');
 	putchar(10);
 	return (0);
-}
-
-int main(void)
-{
-	return (put_char());
 }
