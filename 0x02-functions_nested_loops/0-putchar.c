@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * put_char - Entry point
+ * main - Entry point
  *
  * Return: ALways 0
  */
@@ -15,6 +15,5 @@ int main(void)
 	_putchar('a');
 	_putchar('r');
 	_putchar(10);
-	
 	return (0);
 }
