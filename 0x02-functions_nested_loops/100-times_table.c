@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_times_tables - Entry point
+ * print_times_table - Entry point
  *
  * @n: The value of the times table
  */
