@@ -6,7 +6,14 @@
  *
  * Return: Always 0
  */
-int put_char()
+
+/**
+ * put_char - Entry point
+ *
+ * Return: Always 0
+ */
+
+int put_char(void)
 {
 	putchar('_');
 	putchar('p');
@@ -22,5 +29,5 @@ int put_char()
 
 int main(void)
 {
-	return put_char();
+	return (put_char());
 }
