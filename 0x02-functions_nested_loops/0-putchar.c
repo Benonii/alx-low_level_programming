@@ -20,7 +20,7 @@ int put_char()
 	return (0);
 }
 
-char main(void)
+int main(void)
 {
 	return put_char();
 }
