@@ -36,9 +36,9 @@ void print_time_table(int n)
 				{
 					_putchar((prod / 10) + '0');
 				}
-				_putchar((prod % 10) + '0')
+				_putchar((prod % 10) + '0');
 			}
-			_putchar(10)
+			_putchar(10);
 		}
 	}
 }
