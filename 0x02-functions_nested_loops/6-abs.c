@@ -11,5 +11,5 @@ int _abs(int n)
 		_putchar((n * -1) + '0');
 	else
 		_putchar(n + '0');
-}
 	return (0);
+}
