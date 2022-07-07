@@ -5,19 +5,15 @@
  */
 void print_diagonal(int n)
 {
-	int len;
-	int space; /* this defines how much space there should be before the '\' */
+	int len; /* this defines how much space there should be before the '\\' */
 
 	if (n > 0)
 	{
 		for (len = 0; len < n; len++)
 		{
-			for (m = 0; m < len; m++)
-			{
-				_putchar(' ');
-			}
-			_putchar('\\');
+			_putchar(' ');
 		}
+		_putchar('\\');
 	}
 	_putchar(10);
 }
