@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _isupper - Identifies uppercaase letters
+ * _isdigit - Identifies uppercaase letters
  * @c: The alphabet holder variable
  * Return: 0 or 1
  */
