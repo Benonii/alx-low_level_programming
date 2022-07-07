@@ -5,7 +5,7 @@
  */
 void print_diagonal(int n)
 {
-	int len, space; /* space defines how much space there should be before the '\\' */
+	int len, space;
 
 	if (n > 0)
 	{
@@ -17,7 +17,7 @@ void print_diagonal(int n)
 			}
 			_putchar('\\');
 
-			if (len == n-1)
+			if (len == n - 1)
 				continue;
 			_putchar(10);
 		}
