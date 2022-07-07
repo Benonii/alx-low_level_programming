@@ -1,7 +1,8 @@
 #include "main.h"
 /**
  * mul - multiplies two numbers
- * @c: The alphabet holder variable
+ * @a: Num 1
+ * @b: Num 2
  * Return: product
  */
 int mul(int a, int b)
