@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * mul multiplies two numbers
+ * mul - multiplies two numbers
  * @c: The alphabet holder variable
  * Return: 0
  */
