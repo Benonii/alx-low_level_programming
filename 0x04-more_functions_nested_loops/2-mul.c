@@ -4,7 +4,7 @@
  * @c: The alphabet holder variable
  * Return: 0
  */
-int _mul(int a, int b)
+int mul(int a, int b)
 {
 	int product;
 
