@@ -2,7 +2,7 @@
 /**
  * mul multiplies two numbers
  * @c: The alphabet holder variable
- * Return: the product
+ * Return: 0
  */
 int _mul(int a, int b)
 {
@@ -10,5 +10,5 @@ int _mul(int a, int b)
 
 	product = a * b;
 
-	return (product);
+	return (0);
 }
