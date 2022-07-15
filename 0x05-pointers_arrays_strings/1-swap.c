@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * sawp_int - sawps the value of a and b
+ * swap_int - sawps the value of a and b
  * @a: variable 1
  * @b: variable 2
  */
