@@ -9,7 +9,6 @@
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int index;
-
 	unsigned char *ddest = dest;
 	const unsigned char *ssrc = src;
 
@@ -17,5 +16,5 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 		*dest = src;
 	ddest[index] = ssrc[index];
 
-	return (ddest);
+	return (dest);
 }
