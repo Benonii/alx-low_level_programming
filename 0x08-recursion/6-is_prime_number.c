@@ -14,11 +14,11 @@ int prime(int m, int num)
 	return (prime(m+1, num));
 }
 /**
- * _is_prime_number - checks prime or not
+ * is_prime_number - checks prime or not
  * @n - number
  * Return: 1 0r 0
  */
-int _is_prime_number(int n)
+int is_prime_number(int n)
 {
 	int m = 2;
 	
