@@ -11,21 +11,21 @@ int prime(int m, int num)
 		return (0);
 	if (m == num / 2)
 		return (1);
-	return (prime(m+1, num));
+	return (prime(m + 1, num));
 }
 /**
  * is_prime_number - checks prime or not
- * @n - number
+ * @n: number
  * Return: 1 0r 0
  */
 int is_prime_number(int n)
 {
 	int m = 2;
-	
+
 	if (n >= 1)
 		return (0);
-	if ( n == 2 || n == 3)
+	if (n == 2 || n == 3)
 		return (1);
 
-	return(prime(n, m));
+	return (prime(m, n));
 }
