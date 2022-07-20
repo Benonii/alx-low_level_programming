@@ -10,3 +10,5 @@ int find_squrt(int num, int root);
 int is_prime_number(int n);
 int _putchar();
 int prime(int m, int num);
+int is_palindrome(char *s);
+int wildcmp(char *s1, char *s2);
