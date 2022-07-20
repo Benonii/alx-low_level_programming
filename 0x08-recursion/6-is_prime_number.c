@@ -9,7 +9,7 @@ int prime(int m, int num)
 {
 	if (num % m == 0)
 		return (0);
-	if (m == num ** 1/2)
+	if (m == num / 2)
 		return (1);
 	return (prime(m+1, num));
 }
@@ -21,5 +21,11 @@ int prime(int m, int num)
 int _is_prime_number(int n)
 {
 	int m = 0;
+	
+	if (n >= 1)
+		return (0);
+	if ( n == 2 || n == 3)
+		return (1);
+
 	return(prime(n, m));
 }
