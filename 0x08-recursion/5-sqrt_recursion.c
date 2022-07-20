@@ -4,10 +4,11 @@
  * @n - number
  * Return: The natural squareroot if it exists, -1 if it doesn't
  */
-int root = 0;
 
 int _sqrt_recursion(int n)
 {
+	int root = 0;
+
 	if (n < 0)
 		return (-1);
 	if (n == 1)
@@ -15,5 +16,5 @@ int _sqrt_recursion(int n)
 	if (root * root = n)
 		return (root);
 
-	return (_sqrt_recursion(n, root++));
+	return (_sqrt_recursion(n, root + 1));
 }
