@@ -5,15 +5,15 @@
  * @root: Possible squareroot
  * Return: the squareroot
  */
-int find_squrt(int n, int root)
+int find_squrt(int num, int root)
 {
-	if ((root * root) == n)
+	if ((root * root) == num)
 		return (root);
 
-	if (root == n / 2)
+	if (root == num / 2)
 		return (-1);
 
-	return (find_squrt(n, root++));
+	return (find_squrt(num, root++));
 }
 
 /**
