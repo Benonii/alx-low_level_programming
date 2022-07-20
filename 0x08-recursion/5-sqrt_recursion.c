@@ -4,7 +4,7 @@
  * @n - number
  * Return: The natural squareroot if it exists, -1 if it doesn't
  */
-int root = 0
+int root = 0;
 
 int _sqrt_recursion(int n)
 {
