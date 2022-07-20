@@ -20,7 +20,7 @@ int prime(int m, int num)
  */
 int _is_prime_number(int n)
 {
-	int m = 0;
+	int m = 2;
 	
 	if (n >= 1)
 		return (0);
