@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * find_squrt - finds the square root
- * @n: number
+ * @num: number
  * @root: Possible squareroot
  * Return: the squareroot
  */
