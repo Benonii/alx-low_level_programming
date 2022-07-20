@@ -21,7 +21,7 @@ int is_palindrome(char *s)
 		backwardString = _putchar(*s);
 	}
 
-	if forwardString == backwardString
+	if (forwardString == backwardString)
 		return (1);
 	else
 		return (0);
