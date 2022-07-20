@@ -17,8 +17,8 @@ int is_palindrome(char *s)
 
 	if (*s)
 	{
-		backwardString += is_palindrome(s + 1);
-		backwardString = _putchar(*s);
+		backwardString = is_palindrome(s + 1);
+		backwardString += _putchar(*s);
 	}
 
 	if (forwardString == backwardString)
