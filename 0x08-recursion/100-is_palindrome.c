@@ -11,14 +11,14 @@ int is_palindrome(char *s)
 
 	if (*s)
 	{
-		forwardString = _putchar(*s);
+		forwardString = *s;
 		forwardString += is_palindrome(s + 1);
 	}
 
 	if (*s)
 	{
 		backwardString = is_palindrome(s + 1);
-		backwardString += _putchar(*s);
+		backwardString += *s;
 	}
 
 	if (forwardString == backwardString)
