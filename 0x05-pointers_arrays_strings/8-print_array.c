@@ -7,12 +7,9 @@
 
 void print_array(int *a, int n)
 {
-	int index = 0, len = 0;
+	int index = 0;
 
-	while (a[index++])
-		len++;
-
-	for (index = 0; index < n && index < len; index++)
+	for (index = 0; index < n; index++)
 	{
 		printf("%d", a[index]);
 		
