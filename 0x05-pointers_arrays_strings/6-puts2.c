@@ -11,10 +11,15 @@ void puts2(char *str)
 	while (str[index++])
 		len++;
 
-	while (str[index] && index < len)
+	while (str[index])
 	{
-		_putchar(str[index]);
-		index += 2;
+		if (index < len)
+		{
+			_putchar(str[index]);
+			index += 2;
+		}
+		else
+			break;
 	}
 	_putchar(10);
 }
