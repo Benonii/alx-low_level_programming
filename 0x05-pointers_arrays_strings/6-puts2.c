@@ -5,9 +5,12 @@
  */
 void puts2(char *str)
 {
-	int index = 0;
+	int index;
+	int len = 0;
 
-	while (str[index])
+	while (str[index++])
+		len++;
+	for (index = 0; index < len; index++)
 	{
 		_putchar(str[index]);
 		index += 2;
