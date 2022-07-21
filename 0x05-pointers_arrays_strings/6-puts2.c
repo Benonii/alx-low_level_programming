@@ -6,10 +6,6 @@
 void puts2(char *str)
 {
 	int index = 0;
-	int len;
-
-	while (str[index++])
-		len++;
 
 	while (str[index])
 	{
