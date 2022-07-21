@@ -13,13 +13,10 @@ void puts2(char *str)
 
 	while (str[index])
 	{
-		if (index < len)
-		{
-			_putchar(str[index]);
-			index += 2;
-		}
-		else
-			break;
+		_putchar(str[index]);
+		index += 2;
+
+
 	}
 	_putchar(10);
 }
