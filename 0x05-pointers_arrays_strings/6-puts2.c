@@ -5,7 +5,7 @@
  */
 void puts2(char *str)
 {
-	int index;
+	int index = 0;
 	int len = 0;
 
 	while (str[index++])
