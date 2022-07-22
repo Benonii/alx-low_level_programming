@@ -6,8 +6,8 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-	char src = sourceString, char dest = destString;
-	int index - 0, len = 0;
+	char src = sourceString, dest = destString;
+	int index, len = 0;
 
 	while (s[index++])
 		len++;
