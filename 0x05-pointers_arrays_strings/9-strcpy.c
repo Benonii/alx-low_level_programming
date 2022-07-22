@@ -1,4 +1,4 @@
-#includen"main.h"
+#include "main.h"
 /**
  * _strcpy - copies a string from src to dest
  * @dest: Destination
