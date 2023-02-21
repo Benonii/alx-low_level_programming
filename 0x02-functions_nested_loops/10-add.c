@@ -1,0 +1,15 @@
+#include "main.h"
+
+/**
+ * add -adds two numbers
+ * @a: number 1
+ * @b: number 2
+ * @sum: number 1 + number 2
+ * Return: sum
+ */
+
+int add(int a, b, sum)
+{
+	sum = a + b;
+	return (sum);
+}
