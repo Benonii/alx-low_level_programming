@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * main - the main function
@@ -9,8 +8,8 @@
 
 int main(void)
 {
-	putchar('_');
-	putchar('p');
+	_putchar('_');
+	_putchar('p');
 	_putchar('u');
 	_putchar('t');
 	_putchar('c');
