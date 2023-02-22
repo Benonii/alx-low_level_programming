@@ -16,7 +16,7 @@ void print_to_98(int n)
 		{
 			if (n == 98)
 			{
-				printf('\n');
+				printf("\n");
 				break;
 			}
 			else
@@ -30,7 +30,7 @@ void print_to_98(int n)
 		while (n > 97)
 		{
 			if (n == 98)
-			{	printf('\n');
+			{	printf("\n");
 				break;
 			}
 			else
