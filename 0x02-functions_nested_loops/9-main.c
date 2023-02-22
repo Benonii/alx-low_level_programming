@@ -1,50 +1,17 @@
 #include "main.h"
 #include <stdio.h>
 
-void test(void)
+int print_last_digit(int n)
 {
-        int n, m, x;
+        int lastdigit = n % 10;
 
-        for (n = 0; n <= 9; n++)
-        {
-                for (m = 0; m <= 9; m++)
-                {
-			x = n * m;
-
-			if (x < 10)
-			{
-				putchar((x % 10) + '0');
-				putchar(',');
-				
-				if (m == 9)
-				{	
-					putchar(10);
-					continue;
-				}
-
-				putchar(' ');
-				putchar(' ');
-			}
-			else
-			{
-                        	putchar((x / 10) + '0');
-                        	putchar((x % 10) + '0');
-                                
-				if (m == 9)
-				{
-					putchar(10);
-					continue;
-				}
-
-				putchar(',');
-                                putchar(' ');
-			}
-                }
-        }
+        if (lastdigit < 0)
+                lastdigit *= -1;
+	putchar(lastdigit + '0');
+        return (lastdigit);
 }
-
 int main(void)
 {
-	test();
+	print_last_digit(1044);
 	return (0);
 }
