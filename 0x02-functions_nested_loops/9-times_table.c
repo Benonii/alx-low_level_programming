@@ -15,10 +15,20 @@ void times_table(void)
 		for (c = 0; c < 10; c++)
 		{
 			x = r * c;
-			_putchar(x + '0');
+			if (x < 10)
+				_putchar(x + '0');
+			if (x >= 10)
+			{
+				_putchar((x / 10) + '0');
+				_putchar((x % 10) + '0');
+			}
 
-			if (r == 9 && c ==9)
-				break;
+			if (r == 9)
+				_putchar(10);
+
+			else
+				_putchar(',');
+				_putchar(' ');
 
 			_putchar(',');
 			_putchar(' ');
