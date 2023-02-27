@@ -19,6 +19,6 @@ void _puts(char *str)
 	}
 
 	for (i = 0; i <= count; i++)
-		_putchar (str[i]);
+		_putchar(str[i]);
 	_putchar(10);
 }
