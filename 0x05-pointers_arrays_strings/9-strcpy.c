@@ -20,7 +20,7 @@ char *_strcpy(char *dest,  char *src)
 	}
 	while (dest[i++])
 		count++;
-	*dest[count + 1] = '0';
+	dest[count + 1] = '0';
 
 	return (dest);
 }
