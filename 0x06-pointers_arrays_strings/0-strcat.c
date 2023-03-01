@@ -8,9 +8,9 @@
  * Return: a pointer to char(dest)
  */
 
-char *_strcat(char *dest, char *src)
+char *_strcat(char *dest, const char *src)
 {
-	int i, j, count;
+	int i, count;
 
 	while (dest[i++])
 		count++;
