@@ -1,0 +1,7 @@
+#/bing/bash
+
+git add .
+
+git commit -m "Commits on advacned tasks"
+
+git push
