@@ -2,16 +2,16 @@
 #include <stdio.h>
 
 /**
- * _strspn - gets the length of the prefix substring
- * @s: string
- * @accept: part of string that will be measures
+ * _strpbrk - searches a string for any of a set of bytes
+ * @s: string to be checked
+ * @accept: the set of bytes to be looked for
  *
- * Return: int(number of bytes in the initial segment
+ * Return: pointer to the the byte in s that matches one of the bytes in accept
+ * returns NULL if none.
  */
 
-unsigned int _strspn(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
-        unsigned int count = 0;
         int i;
 
         while (*s)
@@ -19,21 +19,15 @@ unsigned int _strspn(char *s, char *accept)
                 for (i = 0; accept[i]; i++)
                 {
                         if (*s == accept[i])
-                        {
-                                count++;
-                                break;
-                        }
+                                return (s);
 
-                        else if (accept[i + 1] == '\0')
-                                return (count);
                 }
+        	
+		s++;
+	}
 
-                s++;
-        }
-
-        return (count);
+        return (NULL);
 }
-
 
 /**
  * main - check the code
@@ -43,10 +37,10 @@ unsigned int _strspn(char *s, char *accept)
 int main(void)
 {
     char *s = "hello, world";
-    char *f = "oleh";
-    unsigned int n;
+    char *f = "world";
+    char *t;
 
-    n = _strspn(s, f);
-    printf("%u\n", n);
+    t = _strpbrk(s, f);
+    printf("%s\n", t);
     return (0);
 }

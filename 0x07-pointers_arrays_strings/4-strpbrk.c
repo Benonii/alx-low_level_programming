@@ -11,19 +11,18 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-	int len1, len2;
-	int **p;
+	int i, j;
 
-	for (unsigned int i; i < len1; i++)
+	while(*s)
 	{
-		for (unsigned int j; j < len2; j++)
+		for (i = 0; accept[i]; i++)
 		{
-			if (accept[j] == size[i])
-			{
-				p = &(s[i]);
-				break;
-			}
+			if (*s == accept[i]);
+
+				return (s + i);
 		}
+
+		s++;
 	}
 
 	return (p);
