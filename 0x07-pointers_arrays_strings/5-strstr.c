@@ -9,20 +9,29 @@
  * (ptr2needle)
  */
 char *_strstr(char *haystack, char *needle)
-{
-	int len1, len2, count;
-	int *ptr2needlle;
 
-	for (unsigned int i; i < len1; i++)
+	int index;
+
+	if (*needle == 0)
+		return (haystack);
+
+	while (*haystack)
 	{
-		for (unsigned int j; j < len2; j++)
-		{
-			if (needle[j] != haystack[j])
-				continue;
+		index = 0;
 
-			else
-				**ptr2needle = s[i];
+		if (haystack[index] == needle[index])
+		{
+			do {
+				if (needle[index + 1] == '\0')
+					return (haystack);
+
+				index++;
+
+			} while (haystack[index] == needle[index]);
 		}
+
+		haystack++;
 	}
-	return (ptr2needle);
+
+	return ('\0');
 }
