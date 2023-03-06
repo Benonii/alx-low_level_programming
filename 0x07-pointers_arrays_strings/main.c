@@ -2,23 +2,29 @@
 #include <stdio.h>
 
 /**
- * _strchr - locates a character in a string
- * @s: the string
- * @c: the char to be located
+ * _strspn - gets the length of the prefix substring
+ * @s: string
+ * @accept: part of string that will be measures
  *
- * Return: pointer to char
+ * Return: int(number of bytes in the initial segment
  */
 
-char *_strchr(char *s, char c)
+unsigned int _strspn(char *s, char *accept)
 {
-        int i;
+        int i, j;
+	unsigned int count;
 
-        for (i = 0; s[i] >= '\0'; i++)
+        for (i  = 0; i >= '\0'; i++)
         {
-                if (s[i] == c)
-                        return (s + i);
+                for (j = 0; j >= '\0'; j++)
+                {
+                        if (accept[j] == s[i])
+                                count++;
+                        else
+                                continue;
+                }
         }
-	return ('\0');
+        return (count);
 }
 
 /**
@@ -26,16 +32,14 @@ char *_strchr(char *s, char c)
  *
  * Return: Always 0.
  */
+
 int main(void)
 {
-    char *s = "hello";
-    char *f;
+    char *s = "hello, world";
+    char *f = "oleh";
+    unsigned int n;
 
-    f = _strchr(s, 'l');
-
-    if (f != NULL)
-    {
-        printf("%s\n", f);
-    }
+    n = _strspn(s, f);
+    printf("%u\n", n);
     return (0);
 }
