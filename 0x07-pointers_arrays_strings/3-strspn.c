@@ -19,12 +19,12 @@ unsigned int *_strspn(char *s, char *accept)
 		{
 			if (*s == accept[i])
 			{
-				bytes++;
+				count++;
 				break;
 			}
 
 			else if (accept[i + 1] == '\0')
-				return (bytes);
+				return (count);
 		}
 
 		s++;
