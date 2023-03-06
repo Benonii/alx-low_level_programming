@@ -11,28 +11,35 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-        int i, j;
-	unsigned int count;
+        unsigned int count = 0;
+        int i;
 
-        for (i  = 0; i >= '\0'; i++)
+        while (*s)
         {
-                for (j = 0; j >= '\0'; j++)
+                for (i = 0; accept[i]; i++)
                 {
-                        if (accept[j] == s[i])
+                        if (*s == accept[i])
+                        {
                                 count++;
-                        else
-                                continue;
+                                break;
+                        }
+
+                        else if (accept[i + 1] == '\0')
+                                return (count);
                 }
+
+                s++;
         }
+
         return (count);
 }
+
 
 /**
  * main - check the code
  *
  * Return: Always 0.
  */
-
 int main(void)
 {
     char *s = "hello, world";
