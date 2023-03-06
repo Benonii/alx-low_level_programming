@@ -1,47 +1,54 @@
 #include "main.h"
 #include <stdio.h>
 
-/**
- * _memset - fills memory with a constant byte
- * @s: pointer to char
- * @b: byte to fill up memory
- * @n: amount of bytes to fill up
+
+ 
+ /**
+ * _memcpy -  copies memory area from source to destination
+ * @dest: destination
+ * @src: Source
+ * @n: amount(number of bytes) to be copied
  *
- * Return: pointer to char(s)
+ * Return: pointer to char
  */
 
-char *_memset(char *s, char b, unsigned int n)
-{
-       unsigned int i;
-
-        for (i = 0; i < n; i++)
-                s[i] = b;
-
-        return (s);
-}
-
-
-
-
-void simple_print_buffer(char *buffer, unsigned int size)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
         unsigned int i;
 
-        i = 0;
-        while (i < size)
+        for (i = 0; i < n; i++)
+                dest[i] = src[i];
+
+        return (dest);
+}
+
+/**
+ * simple_print_buffer - prints buffer in hexa
+ * @buffer: the address of memory to print
+ * @size: the size of the memory to print
+ *
+ * Return: Nothing.
+ */
+ 
+void simple_print_buffer(char *buffer, unsigned int size)
+{
+    unsigned int i;
+
+    i = 0;
+    while (i < size)
+    {
+        if (i % 10)
         {
-                if (i % 10)
-                {
-                        printf(" ");
-                }
-                if (!(i % 10) && i)
-                {
-                        printf("\n");
-                }
-                printf("0x%02x", buffer[i]);
-                i++;
+            printf(" ");
         }
-        printf("\n");
+        if (!(i % 10) && i)
+        {
+            printf("\n");
+        }
+        printf("0x%02x", buffer[i]);
+        i++;
+    }
+    printf("\n");
 }
 
 /**
@@ -51,10 +58,11 @@ void simple_print_buffer(char *buffer, unsigned int size)
  */
 int main(void)
 {
-    char buffer[98] = {0x00};
+    char buffer[98] = {0};
+    char buffer2[98] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14};
 
     simple_print_buffer(buffer, 98);
-    _memset(buffer, 0x01, 95);
+    _memcpy(buffer + 50, buffer2, 10);
     printf("-------------------------------------------------\n");
     simple_print_buffer(buffer, 98);    
     return (0);
