@@ -8,24 +8,27 @@
  * Return: int(number of bytes in the initial segment
  */
 
-char *_strspn(char *s, char *accept)
+unsigned int *_strspn(char *s, char *accept)
 {
-	int len1, len2;
+	unsigned int count = 0;
+	int i;
 
-	while (s[i++])
-		len1;
-	while (accept[i++])
-		len2++;
-
-	for (unsigned int i; i < len1; i++)
+	while (*s)
 	{
-		for (unsigned int j; j < len2; j++)
+		for (i = 0; accept[i]; i++)
 		{
-			if (accept[j] == s[i])
-				count++;
-			else
-			continue;
+			if (*s == accept[i])
+			{
+				bytes++;
+				break;
+			}
+
+			else if (accept[i + 1] == '\0')
+				return (bytes);
 		}
+
+		s++;
 	}
-	return (count);
+
+	return (bytes);
 }
