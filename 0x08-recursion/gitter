@@ -2,6 +2,6 @@
 
 git add .
 
-git commit -m "Fixing errors"
+git commit -m "First try"
 
 git push
