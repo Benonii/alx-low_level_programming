@@ -10,10 +10,10 @@
 
 int find_sqrt(int num, int root)
 {
-	if (root * root = num)
+	if (root * root == num)
 		return (root);
-	
-	else if ( root == num / 2)
+
+	else if (root == num / 2)
 		return (-1);
 
 	else
@@ -35,9 +35,9 @@ int _sqrt_recursion(int n)
 
 	if (n < 0)
 		return (-1);
-	
+
 	if (n == 1)
-		return(1);
+		return (1);
 
 	return (find_sqrt(n, root));
 }
