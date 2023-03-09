@@ -8,7 +8,7 @@
  * Return: root or -1
  */
 
-int find_sqrt(int num, root)
+int find_sqrt(int num, int root)
 {
 	if (root * root = num)
 		return (root);
