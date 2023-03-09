@@ -2,43 +2,42 @@
 #include <stdio.h>
 
 /**
- * find_sqrt - actually finds the square root
- * @num: the number we get from _sqrt_recursion
- * @root: Possible natural square root
+ * check_if_prime - actually checks if its prime
+ * @num: number
+ * @div: possible divisors
  *
- * Return: root or -1
+ * Return: 1 if prime 0 if not
  */
 
-int find_sqrt(int num, int root)
+int check_if_prime(int num, int div)
 {
-        if (root * root == num)
-                return (root);
+        if (div == num / 2)
+                return (1);
 
-        if ( root == num / 2)
-                return (-1);
-        else
-                return (find_sqrt(num, root + 1));
+        if (num % div == 0)
+                return (0);
+
+        return (check_if_prime(num, div + 1));
+
 }
 
 /**
- * _sqrt_recursion - returns the natural square root of a number
- * @n: The number
+ * int is_prime_number - returns the result of previous function
+ * @n: Nuber to be checked
  *
- * Return: the square root of the number
+ * Return: check_if_prime
+ * .
  */
 
-int _sqrt_recursion(int n)
-{       
-        int root = 0;
-        
-	if (n < 0)
-		return (-1);
+int is_prime_number(int n)
+{
+	int div = 2;
 
-	if (n == 1)
-		return (1);
+        if (n <= 1)
+                return (0);
 
-        return (find_sqrt(n, root));
-}       
+        return (check_if_prime(n, div));
+}
 
 /**
  * main - check the code
@@ -49,17 +48,21 @@ int main(void)
 {
     int r;
 
-    r = _sqrt_recursion(1);
+    r = is_prime_number(1);
     printf("%d\n", r);
-    r = _sqrt_recursion(1024);
+    r = is_prime_number(1024);
     printf("%d\n", r);
-    r = _sqrt_recursion(16);
+    r = is_prime_number(16);
     printf("%d\n", r);
-    r = _sqrt_recursion(17);
+    r = is_prime_number(17);
     printf("%d\n", r);
-    r = _sqrt_recursion(25);
+    r = is_prime_number(25);
     printf("%d\n", r);
-    r = _sqrt_recursion(-1);
+    r = is_prime_number(-1);
+    printf("%d\n", r);
+    r = is_prime_number(113);
+    printf("%d\n", r);
+    r = is_prime_number(7919);
     printf("%d\n", r);
     return (0);
 }
