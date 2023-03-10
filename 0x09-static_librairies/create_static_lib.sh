@@ -1,2 +1,3 @@
 #!/bin/bash
-ar rc liball.a *.o
+ar rc libmy.a *.o
+ranlib libmy.a
