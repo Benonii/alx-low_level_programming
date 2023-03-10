@@ -8,23 +8,22 @@
  *
  * Return: EXIT_SUCCESS
  */
+
 int main(int argc, char *argv[])
 {
-	int mul, n, m;
+	int sum, count;
 
-	if (argc == 3)
+	if (argc > 1)
 	{
-		n = atoi(argv[1]);
-		m = atoi(argv[2]);
-
-		mul = n * m;
-		printf("%d\n", mul);
+		for (count = 1; count < argc - 1; count++)
+			sum += atoi(argv[count]);
+		printf("%d\n", sum);
 
 		exit(EXIT_SUCCESS);
 	}
 	else
 	{
-		printf("ERROR");
+		printf("Error\n");
 		exit(EXIT_FAILURE);
 	}
 }

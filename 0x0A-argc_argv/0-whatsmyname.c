@@ -3,11 +3,13 @@
 
 /**
  * main - Entry point
+ * @argc: argc
+ * @argv: argv
  *
  * Return: EXIT_SUCCESS OR EXIT_FAILURE
  */
 
-int main (int argc, __attribute__ ((unused)) char *argv[])
+int main(int argc, char *argv[])
 {
 
 	(void) argc;

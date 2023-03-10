@@ -3,6 +3,8 @@
 
 /**
  * main - entry point
+ * @argc: argc
+ * @argv: argv
  *
  * Return: EXIT_SUCCESS
  */
