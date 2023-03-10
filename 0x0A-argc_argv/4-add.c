@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(EXIT_FAILURE);
 	}
-	for (count = 1; count < argc - 1; count++)
+	for (count = 1; count < argc; count++)
 		sum += atoi(argv[count]);
 
 	printf("%d\n", sum);
