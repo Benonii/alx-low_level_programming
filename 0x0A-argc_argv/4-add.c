@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 {
 	int sum, count;
 
-	if (argc > 1)
+	if (argc > 1 && argc == int)
 	{
 		for (count = 1; count < argc - 1; count++)
 			sum += atoi(argv[count]);
