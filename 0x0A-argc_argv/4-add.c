@@ -13,17 +13,16 @@ int main(int argc, char *argv[])
 {
 	int sum, count;
 
-	if (argc > 1 && argc == int)
-	{
-		for (count = 1; count < argc - 1; count++)
-			sum += atoi(argv[count]);
-		printf("%d\n", sum);
-
-		exit(EXIT_SUCCESS);
-	}
-	else
+	if (argc <= 1)
 	{
 		printf("Error\n");
 		exit(EXIT_FAILURE);
 	}
+	for (count = 1; count < argc - 1; count++)
+		sum += atoi(argv[count]);
+
+	printf("%d\n", sum);
+
+	exit(EXIT_SUCCESS);
+
 }
