@@ -1,6 +1,14 @@
 #include "main.h"
 #include <stdlib.h>
 
+/**
+ * alloc_grid - allocates a 2x2 0 matrix
+ * @width: width
+ * @height: height
+ *
+ * Return: pointer to the matrix
+ */
+
 int **alloc_grid(int width, int height)
 {
 	int **twoD;
