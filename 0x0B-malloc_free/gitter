@@ -2,6 +2,6 @@
 
 git add .
 
-git commit -m "First try"
+git commit -m "My attempt of task 5(advanced task)"
 
 git push
