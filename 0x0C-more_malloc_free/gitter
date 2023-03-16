@@ -2,6 +2,6 @@
 
 git add .
 
-git commit -m "First try"
+git commit -m "Fixed betty documentaion issue"
 
 git push
