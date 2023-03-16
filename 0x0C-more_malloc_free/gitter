@@ -2,6 +2,6 @@
 
 git add .
 
-git commit -m "Fixed betty documentaion issue"
+git commit -m "Added 1 to len, resolving the appropriate memory allocation issue"
 
 git push
