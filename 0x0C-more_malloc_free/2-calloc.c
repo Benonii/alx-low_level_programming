@@ -23,5 +23,5 @@ void *_calloc(unsigned int nmenb, unsigned int size)
 	for (i = 0; i < (size * nmenb); i++)
 		arr[i] = 0;
 
-	return((void*) arr);
+	return ((void *) arr);
 }

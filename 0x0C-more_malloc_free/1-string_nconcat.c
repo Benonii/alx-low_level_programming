@@ -6,11 +6,12 @@
  * @s1: String 1
  * @s2: string 2
  * @n: The limit of concatination
+ * Return: pointer to char(constr)
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char * constr;
+	char *constr;
 	unsigned int i, j, count, len = 0;
 
 	if (s1 == NULL)
@@ -24,7 +25,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	constr = malloc(sizeof(char) * len);
 
 	if (constr == NULL)
-		return(NULL);
+		return (NULL);
 
 	for (i = 0; s2[i]; i++)
 		count++;
@@ -41,5 +42,5 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (j = 0; j < n; j++)
 		constr[i++] = s2[j];
 
-	return(constr);
+	return (constr);
 }
