@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 /**
- * free_dogs - frees dogs
+ * free_dog - frees dogs
  * @d: the address of dogs to be freed
  */
 
-void free_dogs(dog_t *d)
+void free_dog(dog_t *d)
 {
 	if (d == NULL)
 		return;
