@@ -9,14 +9,14 @@
  * Return: Always 0
  */
 
-int main(int argc, char *argv[])
+int main(int  __attribute__((__unused__)) argc, char *argv[])
 {
 	int num1, num2;
 	char *operator;
 
 	if (argc != 4)
 	{
-		printf("ERROR");
+		printf("Error\n");
 		exit(98);
 	}
 
@@ -27,12 +27,12 @@ int main(int argc, char *argv[])
 	if (*operator != '+' && *operator != '-' &&
 		*operator != '*' && *operator != '/' && *operator != '%')
 	{
-		printf("ERROR");
+		printf("Error\n");
 		exit(99);
 	}
 	if ((*operator == '/' || *operator == '%') && num2 == 0)
 	{
-		printf("ERROR");
+		printf("Error\n");
 		exit(100);
 	}
 	printf("%d\n", get_op_func(operator)(num1, num2));
