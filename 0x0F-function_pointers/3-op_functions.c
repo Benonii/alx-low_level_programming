@@ -2,6 +2,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+int op_add(int a, int b);
+int op_sub(int a, int b);
+int op_mul(int a, int b);
+int op_div(int a, int b);
+int op_mod(int a, int b);
+int (*get_op_func(char *s))(int, int);
+
 /**
  * op_add  - adds two numbers
  * @a: number 1
@@ -12,11 +19,7 @@
 
 int op_add(int a, int b)
 {
-    int sum = 0;
-
-    sum = a + b;
-
-    return (sum);
+    return (a + b);
 }
 
 /**
@@ -29,11 +32,7 @@ int op_add(int a, int b)
 
 int op_sub(int a, int b)
 {
-    int diff = 0;
-
-    diff = a - b;
-
-    return (diff);
+    return (a - b);
 }
 
 /**
@@ -46,11 +45,7 @@ int op_sub(int a, int b)
 
 int op_mul(int a, int b)
 {
-    int prod = 0;
-
-    prod = a * b;
-
-    return (prod);
+    return (a * b);
 }
 
 /**
@@ -62,11 +57,8 @@ int op_mul(int a, int b)
  */
 int op_div(int a, int b)
 {
-    int quot = 0;
 
-    quot = a / b;
-
-    return (quot);
+    return (a / b);
 }
 
 /**
@@ -79,9 +71,5 @@ int op_div(int a, int b)
 
 int op_mod(int a, int b)
 {
-    int mod = 0;
-
-    mod = a % b;
-
-    return (mod);
+    return (a % b);
 }
