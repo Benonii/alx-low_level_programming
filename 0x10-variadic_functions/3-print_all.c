@@ -15,10 +15,10 @@ void print_string(va_list args);
 
 void print_char(va_list args)
 {
-	char *ch;
+	char ch;
 
-	ch = va_arg(args, char *);
-	printf("%s", ch);
+	ch = va_arg(args, int);
+	printf("%c", ch);
 }
 
 /**
@@ -43,7 +43,7 @@ void print_int(va_list args)
 
 void print_float(va_list args)
 {
-	double floater;
+	float floater;
 
 	floater = va_arg(args, double);
 	printf("%f", floater);
@@ -59,6 +59,12 @@ void print_string(va_list args)
 	char *str;
 
 	str = va_arg(args, char *);
+
+	if(str == NULL)
+	{
+		printf("(nil)");
+
+	}
 	printf("%s", str);
 }
 
@@ -80,21 +86,21 @@ void print_all(const char * const format, ...)
 		{"f", print_float},
 		{"s", print_string}
 	};
+
 	va_start(args, format);
 
 	while (format && (*(format + i)))
 	{
 		j = 0;
 
-		while (j < 4 && (format + i) != funcs[j].symbol)
-		{
+		while (j < 4 && (*(format + i) != *(funcs[j].symbol)))
 			j++;
-			if (j < 4)
-			{
-				printf("%s", separator);
-				funcs[j].print(args);
-				separator = ", ";
-			}
+
+		if (j < 4)
+		{
+			printf("%s", separator);
+			funcs[j].print(args);
+			separator = ", ";
 		}
 	
 		i++;
