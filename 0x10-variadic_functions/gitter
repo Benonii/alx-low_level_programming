@@ -2,6 +2,6 @@
 
 git add .
 
-git commit -m "First attempt at the checker"
+git commit -m "Final attempt at slvaging my score"
 
 git push
