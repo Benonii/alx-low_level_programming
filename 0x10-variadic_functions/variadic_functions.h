@@ -8,6 +8,13 @@ void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 
+/**
+ * struct printer - takes the format and points to the function
+ *		   depending on the data type
+ * @symbol:The format
+ * @print: pointer to the right funciton
+ */
+
 typedef struct printer
 {
 	char *symbol;
