@@ -8,7 +8,7 @@
  * Return: A pointer to the new node
  */
 
-list_t *add_node(list_t **head, const *str)
+list_t *add_node(list_t **head, const char *str)
 {
 	char *temp;
 	int len;
