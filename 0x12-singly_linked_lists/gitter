@@ -2,6 +2,6 @@
 
 git add .
 
-git commit -m "First try on the checker"
+git commit -m "Second try on the checker"
 
-git add .
+git push
