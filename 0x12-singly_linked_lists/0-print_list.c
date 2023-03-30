@@ -7,19 +7,19 @@
 
 size_t print_list(const list_t *h)
 {
-	int i = 0;
+	size_t i = 0;
 
 	h = malloc(sizeof(list_t));
 
 	if (h == NULL)
-		return (-1);
+		printf("[0] (nil)\n");
 
 	while (h != NULL)
 	{
-		printf("[%d] %s", i,  h-> str);
-
 		if (h->str == NULL)
-			printf("[%d] (nil)", i);
+			printf("[0] (nil)\n");
+		else
+			printf("[%d] %s\n", h->len, h-?str);
 		i++;
 		h = h->next;
 	}
