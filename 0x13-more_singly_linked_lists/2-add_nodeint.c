@@ -3,27 +3,28 @@
 /**
  * add_nodeint - adds a node at the begenning of a list
  * @head: Points to the first node
- * n: The value to be placed in the new node
+ * @n: The value to be placed in the new node
  * Return: A pointer to the new node
  */
 
 listint_t *add_nodeint(listint_t **head, const int n)
 {
-    listint_t *ptr, *temp;
+	listint_t *ptr, *temp;
 
-    ptr = malloc(sizeof(listint_t));
+	ptr = malloc(sizeof(listint_t));
 
-    if (ptr == NULL)
-    {
-        free(ptr);
-        return(NULL);
-    }
-    temp = *head;
+	if (ptr == NULL)
+	{
+		free(ptr);
+		return (NULL);
+	}
 
-    ptr->n = n;
-    ptr->next = temp;
+	temp = *head;
 
-    *head = ptr;
+	ptr->n = n;
+	ptr->next = temp;
 
-    return (*head);
+	*head = ptr;
+
+	return (*head);
 }
