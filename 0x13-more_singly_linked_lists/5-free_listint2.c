@@ -13,7 +13,7 @@ void free_listint2(listint_t **head)
 	ptr = *head;
 
 	if (ptr == NULL)
-		exit(0);
+		printf("Freed!");
 
 	while (ptr)
 	{
