@@ -23,6 +23,8 @@ int main(void)
     add_nodeint_end(&head, 402);
     add_nodeint_end(&head, 1024);
     print_listint(head);
+    node = get_nodeint_at_index(head, 8);
+    node = get_nodeint_at_index(head, -1);
     node = get_nodeint_at_index(head, 5);
     printf("%d\n", node->n);
     print_listint(head);
