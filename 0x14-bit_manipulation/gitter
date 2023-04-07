@@ -1,0 +1,7 @@
+#!/bin/bash
+
+git add .
+
+git commit -m "Pushing Readme and others"
+
+git push
