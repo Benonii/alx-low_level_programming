@@ -2,6 +2,6 @@
 
 git add .
 
-git commit -m "Pushing main tasks, betty checked"
+git commit -m "Added edge case"
 
 git push
