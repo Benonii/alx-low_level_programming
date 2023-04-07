@@ -2,6 +2,6 @@
 
 git add .
 
-git commit -m "Added edge case"
+git commit -m "Cleaning up"
 
 git push
