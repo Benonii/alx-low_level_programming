@@ -8,8 +8,7 @@
  */
 
 int main (int ac, char **av)
-{
-	int res;
+{ 
 	if (ac != 3)
 	{
 		dprintf(2, "Usage: cp file_from file_to\n");
@@ -28,8 +27,7 @@ int main (int ac, char **av)
 		exit(99);
 	}
 
-	res = cp_content(av[1], av[2]);
-	printf("%d", res);
+	cp_content(av[1], av[2]);
 
 	return (0);
 }
@@ -41,6 +39,13 @@ int cp_content(char *file_from, char *file_to)
 
 	buf = malloc(1024);
 	o = open(file_from, O_RDONLY);
+
+	if (o == -1)
+	{
+		dprintf(2, "Error: Can't read from file %s\n", file_from);
+		exit(98);
+	}
+
 	op = open(file_to, O_CREAT | O_RDWR | O_TRUNC, 0664);
 	r = read (o, buf, 10000);
 	w = write(op, buf, r);
@@ -49,7 +54,7 @@ int cp_content(char *file_from, char *file_to)
 	c = close(o);
 	cl = close(op);
 
-	if (o == -1 || op == -1 || r == -1 || w == -1 || r != w)
+	if (op == -1 || r == -1 || w == -1 || r != w)
 	{
 		return (-1);
 	}
