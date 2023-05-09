@@ -25,7 +25,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	/* checks if open, read and write executed properly */
 	if (o == -1 || m == -1 || n == -1 || m  != n)
-		return (-1);
+		return (0);
 
 	free(f);
 	close(o);
