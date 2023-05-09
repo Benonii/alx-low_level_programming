@@ -47,8 +47,8 @@ int cp_content(char *file_from, char *file_to)
 	}
 
 	op = open(file_to, O_CREAT | O_RDWR | O_TRUNC, 0664);
-	r = read (o, buf, 10000);
-	w = write(op, buf, 10000);
+	r = read (o, buf, 100000);
+	w = write(op, buf, r);
 
 	free(buf);
 	c = close(o);
