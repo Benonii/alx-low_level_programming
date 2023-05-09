@@ -2,13 +2,13 @@
 
 /**
  * main - Entry point
- * @argc: Argument count
- * @argv: Arguments
+ * @ac: Argument count
+ * @av: Arguments
  * Return: Always 0
  */
 
-int main (int ac, char **av)
-{ 
+int main(int ac, char **av)
+{
 	if (ac != 3)
 	{
 		dprintf(2, "Usage: cp file_from file_to\n");
@@ -20,7 +20,7 @@ int main (int ac, char **av)
 		dprintf(2, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
-	
+
 	if (av[2] == NULL)
 	{
 		dprintf(2, "Error: Can't write to %s\n", av[2]);
@@ -47,7 +47,7 @@ int cp_content(char *file_from, char *file_to)
 	}
 
 	op = open(file_to, O_CREAT | O_RDWR | O_TRUNC, 0664);
-	r = read (o, buf, 100000);
+	r = read(o, buf, 100000);
 	w = write(op, buf, r);
 
 	free(buf);
@@ -58,7 +58,7 @@ int cp_content(char *file_from, char *file_to)
 	{
 		return (-1);
 	}
-	
+
 	if (c == -1)
 	{
 		dprintf(2, "Error: Can't close fd %d\n", c);
@@ -66,10 +66,10 @@ int cp_content(char *file_from, char *file_to)
 	}
 
 	if (cl == -1)
-        {
-                dprintf(2, "Error: Can't close fd %d", cl);
-                exit(100);
-        }
+	{
+		dprintf(2, "Error: Can't close fd %d", cl);
+		exit(100);
+	}
 
 	return (1);
 }
