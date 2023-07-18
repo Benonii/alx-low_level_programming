@@ -40,7 +40,7 @@ int print_binary(va_list args)
 
 void recursion_binary(int a)
 {
-	unsigned int t;
+	unsigned int t = 0;
 
 	t = a;
 	if (t / 2)

@@ -9,7 +9,7 @@
 
 int unsigned_integer(va_list args)
 {
-	unsigned int n;
+	unsigned int n = 0;
 
 	n = va_arg(args, unsigned int);
 
@@ -32,7 +32,7 @@ int print_unsigned_no(unsigned int m)
 {
 	int y = 1, z = 0;
 
-	unsigned int num;
+	unsigned int num = 0;
 
 	num = m;
 

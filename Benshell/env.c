@@ -9,7 +9,7 @@
 
 void env(void)
 {
-	int i;
+	int i = 0;
 
 	for (i = 0; environ[i]; i++)
 		_printf("%s\n", environ[i]);

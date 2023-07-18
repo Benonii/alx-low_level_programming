@@ -8,19 +8,26 @@
  * return: None
  */
 
-void execute(char *av4[32])
+void execute(char **av)
 {
-	char *full_path = NULL, *path, *token, *delim = ":";
-
+	char *full_path = NULL, *path = NULL, *token = NULL, *delim = ":";
+	size_t dir_len = 0, cmd_len = 0, slash_len = 0;
+	
 	path = getenv("PATH");
+
+	if (path == NULL || *path == '\0')
+	{
+		perror("PATH variable not set");
+		exit(EXIT_SUCCESS);
+	}
 
 	token = strtok(path, delim);
 
 	while (token)
 	{
-		size_t dir_len = strlen(token);
-		size_t cmd_len = strlen(*av4);
-		size_t slash_len = 1; /* Length of '/' */
+		dir_len = strlen(token);
+		cmd_len = strlen(av[0]);
+		slash_len = 1; /* Length of '/' */
 
 		full_path = malloc(dir_len + slash_len + cmd_len + 1);
 
@@ -32,11 +39,11 @@ void execute(char *av4[32])
 
 		strcpy(full_path, token);
 		strcat(full_path, "/");
-		strcat(full_path, av4[0]);
+		strcat(full_path, av[0]);
 
 		if ((access(full_path, X_OK)) == 0)
 		{
-			if ((execve(full_path, av4, environ)) == -1)
+			if ((execve(full_path, av, environ)) == -1)
 			{
 				perror("execve");
 				exit(EXIT_SUCCESS);
@@ -52,7 +59,6 @@ void execute(char *av4[32])
 
 	if (token == NULL)
 	{
-		_printf("hsh: %s: command not found\n", av4[0]);
+		_printf("hsh: %s: command not found\n", av[0]);
 		exit(EXIT_SUCCESS);
-	}
-}
+	}}

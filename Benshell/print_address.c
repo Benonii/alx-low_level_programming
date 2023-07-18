@@ -8,9 +8,9 @@
 
 int print_pointer(va_list args)
 {
-	char *ptr, c;
-	int n;
-	unsigned long int i;
+	char *ptr = NULL, c = '\0';
+	int n = 0;
+	unsigned long int i = 0;
 
 	ptr = va_arg(args, char *);
 
