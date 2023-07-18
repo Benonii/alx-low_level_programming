@@ -26,8 +26,8 @@ int print_char(va_list args)
 
 int print_string(va_list args)
 {
-	char *str;
-	int n;
+	char *str = NULL;
+	int n = 0;
 
 	str = va_arg(args, char *);
 
@@ -78,7 +78,7 @@ int print_integer(va_list args)
 
 void recursion_integer(int a)
 {
-	unsigned int t;
+	unsigned int t = 0;
 
 	t = a;
 	if (t / 10)

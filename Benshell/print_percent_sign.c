@@ -10,8 +10,8 @@
 
 int print_percent(va_list args)
 {
-	char percent_sign;
-	int n;
+	char percent_sign = '\0';
+	int n = 0;
 
 	percent_sign = '%';
 	(void) args;

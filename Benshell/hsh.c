@@ -11,13 +11,17 @@ int main(void)
 {
 	while (1) /* Infinite loop */
 	{
-		int status;
-		char *av1[32] = {NULL};
-		pid_t pid;
+		int status = 0;
+		char *line = NULL;
+		char **cmd = NULL;
+		pid_t pid = 0;
 
-		*av1 = get_command();
+		line = get_command();
 
-		if (*av1 == NULL)
+		cmd = malloc(32 * sizeof(char *));
+		*cmd = tokenize(line);
+
+		if (*cmd == NULL)
 			continue;
 
 		/* checks if command includes "/bin/" */
@@ -26,16 +30,16 @@ int main(void)
 		if (pid == -1)
 		{
 			perror("fork: ");
-			free(*av1);
+			free(*cmd);
 			return (EXIT_SUCCESS);
 		}
 
 		if (pid == 0) /* run execve in a child process */
-			execute(av1);
+			execute(cmd);
 		else
 		{
 			wait(&status);
-			fflush(stdin);
+			free(line);
 	       	}
 	}
 	return (0);
