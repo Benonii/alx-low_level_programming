@@ -12,30 +12,49 @@ int main(void)
 	while (1) /* Infinite loop */
 	{
 		int status = 0;
-		char *line = NULL;
-		char **cmd = NULL;
+		char *line = NULL, *token = NULL, *tokens[100] = { NULL };
+		char *delim = " \n\t\r\a";
 		pid_t pid = 0;
+		int i = 0, a = 0;
 
 		line = get_command();
 
-		cmd = malloc(32 * sizeof(char *));
-		*cmd = tokenize(line);
-
-		if (*cmd == NULL)
+		if (line == NULL)
+                {
+			perror("malloc failure");
 			continue;
+		}
+		
+		token = strtok(line, delim);
+
+		while(token != NULL && i < 99)
+		{
+			tokens[i] = token;
+			token = strtok(NULL, delim);
+			i++;
+		}
+
+		if (*tokens == NULL)
+			continue;
+		if (_strcmp(*tokens, "exit") == 0)
+		{
+			free(line);
+			return(0);
+		}
 
 		/* checks if command includes "/bin/" */
+		a = check_for_bin(tokens);
 
 		pid = fork();
 		if (pid == -1)
 		{
 			perror("fork: ");
-			free(*cmd);
+			free(*tokens);
 			return (EXIT_SUCCESS);
 		}
 
 		if (pid == 0) /* run execve in a child process */
-			execute(cmd);
+			execute(tokens, a);
 		else
 		{
 			wait(&status);
