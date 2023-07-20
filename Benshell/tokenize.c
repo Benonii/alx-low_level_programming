@@ -10,25 +10,17 @@
 
 char *tokenize(char *line)
 {
-	char *token = NULL, **tokens = NULL, *delim = " \n\t\r\a";
+	char *token = NULL, *tokens[100] = { NULL }, *delim = " \n\t\r\a";
 	int i = 0;
 
-	tokens = malloc(32 * sizeof(char *));
-
-	if (tokens == NULL)
-	{
-		perror("malloc");
-		exit(EXIT_FAILURE);
-	}
-
 	token = strtok(line, delim);
-	while (token && i < 31)
+
+	while (token != NULL && i < 99)
 	{
 		tokens[i] = token;
-		strtok(NULL, delim);
+		token = strtok(NULL, delim);
 		i++;
 	}
-	tokens[i] = NULL;
 
 	return(*tokens);
 }

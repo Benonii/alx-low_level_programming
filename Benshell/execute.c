@@ -8,12 +8,21 @@
  * return: None
  */
 
-void execute(char **av)
+void execute(char **av, int a)
 {
 	char *full_path = NULL, *path = NULL, *token = NULL, *delim = ":";
 	size_t dir_len = 0, cmd_len = 0, slash_len = 0;
-	
+
 	path = getenv("PATH");
+
+	if (a == 5) /* if command starts with "/bin/" */
+	{
+		if (execve(av[0], av, environ))
+		{
+			_printf("hsh: %s: command not found", av[0]);
+			exit(EXIT_SUCCESS);
+		}
+	}
 
 	if (path == NULL || *path == '\0')
 	{
@@ -23,6 +32,11 @@ void execute(char **av)
 
 	token = strtok(path, delim);
 
+	if (token == NULL)
+	{	
+		perror("empty");
+		exit(EXIT_SUCCESS);
+	}
 	while (token)
 	{
 		dir_len = strlen(token);
