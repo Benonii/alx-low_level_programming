@@ -36,6 +36,7 @@ int main(void)
 
 		if (*tokens == NULL)
 			continue;
+
 		if (_strcmp(*tokens, "exit") == 0)
 		{
 			free(line);
@@ -44,6 +45,8 @@ int main(void)
 
 		/* checks if command includes "/bin/" */
 		a = check_for_bin(tokens);
+
+		(void) a;
 
 		pid = fork();
 		if (pid == -1)

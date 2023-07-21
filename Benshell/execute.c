@@ -11,18 +11,19 @@
 void execute(char **av, int a)
 {
 	char *full_path = NULL, *path = NULL, *token = NULL, *delim = ":";
-	size_t dir_len = 0, cmd_len = 0, slash_len = 0;
+	size_t dir_len = 0, cmd_len = 0, slash_len = 1;
 
-	path = getenv("PATH");
-
-	if (a == 5) /* if command starts with "/bin/" */
+	if (a == 5)
 	{
-		if (execve(av[0], av, environ))
+		if ((execve(av[0], av, environ)) == 0)
 		{
-			_printf("hsh: %s: command not found", av[0]);
+			perror("execve");
 			exit(EXIT_SUCCESS);
 		}
 	}
+
+	path = getenv("PATH");
+
 
 	if (path == NULL || *path == '\0')
 	{
@@ -41,9 +42,8 @@ void execute(char **av, int a)
 	{
 		dir_len = strlen(token);
 		cmd_len = strlen(av[0]);
-		slash_len = 1; /* Length of '/' */
 
-		full_path = malloc(dir_len + slash_len + cmd_len + 1);
+		full_path = malloc(dir_len + cmd_len + slash_len + 1);
 
 		if (!full_path)
 		{
@@ -52,7 +52,8 @@ void execute(char **av, int a)
 		}
 
 		strcpy(full_path, token);
-		strcat(full_path, "/");
+		strcat(full_path, "/")
+			;
 		strcat(full_path, av[0]);
 
 		if ((access(full_path, X_OK)) == 0)
@@ -74,5 +75,6 @@ void execute(char **av, int a)
 	if (token == NULL)
 	{
 		_printf("hsh: %s: command not found\n", av[0]);
+		free(*av);
 		exit(EXIT_SUCCESS);
 	}}
