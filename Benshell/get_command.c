@@ -13,13 +13,15 @@ char *get_command()
 	size_t bufsize = 0;
 	int nread = 0;
 
-	if (isatty(STDIN_FILENO == 0))
+	if (isatty(STDIN_FILENO == 1))
 		_printf("($) ");
 
 	nread = getline(&line, &bufsize, stdin);
 
 	if (nread == -1)
 	{
+		if (isatty(STDIN_FILENO == 1))
+			_printf("\n");
 		free(line);
 		exit(EXIT_SUCCESS);
 	}
