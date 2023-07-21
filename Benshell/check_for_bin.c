@@ -14,10 +14,11 @@ int check_for_bin(char *av2[100])
 	char cmd[6] = "/bin/";
 	int a = 0, j = 0;
 
-	cmd[6] = '\0';
-
 	for (; j < 5; j++)
 	{
+		if (av2[0][j] == '\0')
+			return (0);
+
 		if (cmd[j] == av2[0][j])
 			a++;
 	}
