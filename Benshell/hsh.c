@@ -35,7 +35,10 @@ int main(void)
 		}
 
 		if (*tokens == NULL)
+		{
+			free(line);
 			continue;
+		}
 
 		if (_strcmp(*tokens, "exit") == 0)
 		{
@@ -58,6 +61,7 @@ int main(void)
 
 		if (pid == 0) /* run execve in a child process */
 			execute(tokens, a);
+
 		else
 		{
 			wait(&status);

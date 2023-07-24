@@ -9,6 +9,7 @@
 #include <string.h>
 #include <errno.h>
 
+
 char *_strcat(char *dest, char *src);
 int _strcmp(char *s1, char *s2);
 char *_strcpy(char *dest, const char *src);
@@ -19,6 +20,6 @@ void execute(char **av, int a);
 void env(void);
 extern char **environ;
 int change_directory(const char *path);
-char *tokenize(char *line);
+char *_getenv(char *var);
 
 #endif

@@ -22,7 +22,7 @@ void execute(char **av, int a)
 		}
 	}
 
-	path = getenv("PATH");
+	path = _getenv("PATH");
 
 
 	if (path == NULL || *path == '\0')
@@ -40,8 +40,8 @@ void execute(char **av, int a)
 	}
 	while (token)
 	{
-		dir_len = strlen(token);
-		cmd_len = strlen(av[0]);
+		dir_len = _strlen(token);
+		cmd_len = _strlen(av[0]);
 
 		full_path = malloc(dir_len + cmd_len + slash_len + 1);
 
@@ -52,9 +52,8 @@ void execute(char **av, int a)
 		}
 
 		strcpy(full_path, token);
-		strcat(full_path, "/")
-			;
-		strcat(full_path, av[0]);
+		_strcat(full_path, "/");
+		_strcat(full_path, av[0]);
 
 		if ((access(full_path, X_OK)) == 0)
 		{
@@ -75,6 +74,6 @@ void execute(char **av, int a)
 	if (token == NULL)
 	{
 		_printf("hsh: %s: command not found\n", av[0]);
-		free(*av);
 		exit(EXIT_SUCCESS);
-	}}
+	}
+}
