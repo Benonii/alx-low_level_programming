@@ -1,0 +1,28 @@
+#!/bin/bash
+echo "     /bin/ls   " | valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s ./hsh
+
+echo "    /bin/ls " | echo   "/bin/ls" | echo "   /bin/ls "  | valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s ./hsh
+
+echo "" | valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s ./hsh
+
+echo "    " | valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s ./hsh
+
+echo "    /bin/ls    -la   " | valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s ./hsh
+
+echo "   /bin/ls   -la  " | echo "   bin/ls   -la   " | echo "    bin/ls   -la  " | valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s ./hsh
+
+echo "   ls   " | valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s ./hsh
+
+echo "   ls   " | echo "   ls   " | echo "   ls   " | valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s ./hsh
+
+echo "   ls -la   " | echo "   ls   -la  " | echo "  ls -la  " | valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s ./hsh
+
+echo "exit" | valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s ./hsh
+
+echo "    exit    " | valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s ./hsh
+
+echo "env" | valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s ./hsh
+
+echo "    env    " | valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s ./hsh
+
+valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s ./hsh
