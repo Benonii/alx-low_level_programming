@@ -17,6 +17,7 @@ int _strlen(char *s);
 char *get_command();
 int check_for_bin(char *av2[100]);
 void execute(char **av, int a);
+void execute_bin(char **av);
 void env(void);
 extern char **environ;
 int change_directory(const char *path);

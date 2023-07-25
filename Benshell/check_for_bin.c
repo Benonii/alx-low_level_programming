@@ -3,8 +3,7 @@
 
 /**
  * check_for_bin - checks if the command starts with bin
- * @cmd: string "/bin/"
- * @av: the command
+ * @av2: the command
  *
  * Return: 5 if it's a match, anything else if not
  */

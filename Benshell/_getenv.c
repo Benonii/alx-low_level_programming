@@ -1,4 +1,10 @@
 #include "main.h"
+/**
+ * _getenv - gets an environment variable from the enviroment
+ * @var: The environment variable to get
+ *
+ * Return: the value of the enivroment variable
+ */
 
 char *_getenv(char *var)
 {
