@@ -4,6 +4,8 @@
  * add_dnodeint_end - adds node at the end of a dlistint_t list
  * @head: points to the beginning of the list
  * @n: The value of the node to be inserted
+ *
+ * Return: Address of the added node
  */
 
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
