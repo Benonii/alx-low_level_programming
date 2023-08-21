@@ -50,6 +50,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx,
 	}
 
 	current = *h;
+
 	while (current != NULL)
 	{
 		if (i == idx)
