@@ -13,7 +13,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	unsigned long int i;
 
 	if (size == 0)
-		return NULL;
+		return (NULL);
 
 
 	table->size = size;
@@ -22,5 +22,5 @@ hash_table_t *hash_table_create(unsigned long int size)
 	for (i = 0; i < table->size; i++)
 		table->array[i] = NULL;
 
-	return table;
+	return (table);
 }
