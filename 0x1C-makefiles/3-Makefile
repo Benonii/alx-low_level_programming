@@ -10,10 +10,9 @@ all: $(OBJ) m.h
 .PHONY = clean oclean fclean re
 
 clean:
-	-rm *~
+	-rm -f *~ school
 oclean:
-	-rm *.o
-fclean:
-	-rm *~ *.o
-re:
-	$(all)
+	-rm -f main.o school.o
+fclean: clean oclean
+
+re: oclean all
