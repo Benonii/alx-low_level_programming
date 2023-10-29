@@ -17,9 +17,9 @@ def island_perimeter(grid):
                 continue
 
             top = grid[i - 1][j] if i != 0 else 0
-            bottom = grid[i + 1][j] if i <= len(grid) - 1 else 0
+            bottom = grid[i + 1][j] if i != len(grid) - 1 else 0
             left = grid[i][j - 1] if j != 0 else 0
-            right = grid[i][j + 1] if j <= len(grid) - 1 else 0
+            right = grid[i][j + 1] if j != len(row) - 1 else 0
 
             for neighbors in [top, bottom, left, right]:
                 if neighbors == 0:
