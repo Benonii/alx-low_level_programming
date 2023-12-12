@@ -66,7 +66,7 @@ int exponential_search(int *array, size_t size, int value)
 	}
 
 	lower = bound / 2;
-	upper  =  bound >= size ? size - 1 : bound - lower;
+	upper  =  bound >= size ? size - 1 : (bound + 1) - lower;
 
 	return (binary_2(array, value, lower, upper));
 }
