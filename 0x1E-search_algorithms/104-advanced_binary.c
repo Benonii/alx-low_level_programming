@@ -39,7 +39,7 @@ int recursive_call(int *array, int value, int left, int right)
 	else if (array[middle] < value)
 		left = middle + 1;
 	else
-		right = middle - 1;
+		right = middle;
 
 	return (recursive_call(array, value, left, right));
 }
