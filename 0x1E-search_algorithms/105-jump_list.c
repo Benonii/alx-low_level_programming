@@ -33,7 +33,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 			current = current->next;
 			k++;
 		}
-		printf("Value checked at index[%ld] = [%d]\n",
+		printf("Value checked at index [%ld] = [%d]\n",
 				current->index, current->n);
 	}
 
@@ -43,7 +43,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	{
 		if (temp != NULL)
 		{
-			printf("Value checked at index[%ld] = [%d]\n",
+			printf("Value checked at index [%ld] = [%d]\n",
 				temp->index, temp->n);
 		}
 		if (temp->n == value)
