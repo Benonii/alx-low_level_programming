@@ -24,6 +24,13 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 		if (current->n >= value)
 			break;
 
+		if (current->next == NULL)
+		{
+			printf("Value checked at index[%ld] = [%d]\n",
+					current->index, current->n);
+			break;
+		}
+
 		temp = current;
 		k = 0;
 		while (k < step)
